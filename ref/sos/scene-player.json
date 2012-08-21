@@ -1,0 +1,110 @@
+{
+	"scene0-player": {
+		"isConstant": 0,
+		"elements": {
+			"scene0-swiffy": {
+				"translateX": [0,0],
+				"translateY": [0,0],
+				"delay": [0,0],
+				"duration": 1000,
+				"loop": 0,
+				"reverse": 0,
+				"easing": "TWEEN.Easing.Linear.EaseNone"
+			}
+		}
+	},
+	"scene1-player": {
+		"isConstant": 0,
+		"elements": {
+			"yellow-car": {
+				"translateX": [4000,-2000],
+				"translateY": [50,50],
+				"delay": [0,0],
+				"duration": 30000,
+				"loop": 1,
+				"reverse": 0,
+				"easing": "TWEEN.Easing.Linear.EaseNone"
+			},
+			"blue-car": {
+				"translateX": [4000,-2000],
+				"translateY": [50,50],
+				"delay": [10000,0],
+				"duration": 30000,
+				"loop": 1,
+				"reverse": 0,
+				"easing": "TWEEN.Easing.Linear.EaseNone"
+			},
+			"red-car": {
+				"translateX": [4000,-2000],
+				"translateY": [50,50],
+				"delay": [20000,0],
+				"duration": 30000,
+				"loop": 1,
+				"reverse": 0,
+				"easing": "TWEEN.Easing.Linear.EaseNone"
+			}
+		}
+	},
+	"scene2-player": {
+		"isConstant": 0,
+		"elements": {
+		}
+	},
+	"scene3-player": {
+		"isConstant": 0,
+		"elements": {
+			"scene3-swiffy-2": {
+				"translateX": [-250,2000],
+				"translateY": [0,0],
+				"delay": [0,10000],
+				"duration": 8000,
+				"loop": 1,
+				"reverse": 0,
+				"easing": "TWEEN.Easing.Linear.EaseNone"
+			},
+			"scene3-swiffy-3": {
+				"translateX": [2000,-250],
+				"translateY": [0,0],
+				"delay": [10000,10000],
+				"duration": 8000,
+				"loop": 1,
+				"reverse": 0,
+				"easing": "TWEEN.Easing.Linear.EaseNone"
+			}
+		}
+	},
+	"scene4-player": {
+		"isConstant": 0,
+		"elements": {
+		}
+	},
+	"scene5-player": {
+		"isConstant": 0,
+		"elements": {
+		}
+	},
+	"scene6-player": {
+		"isConstant": 0,
+		"elements": {
+		}
+	},
+	"scene7-player": {
+		"isConstant": 0,
+		"elements": {
+			"scene7-clouds-front": {
+				"translateX": [0,120],
+				"translateY": [10,10],
+				"delay": [1000,0],
+				"duration": 20000,
+				"loop": 1,
+				"reverse": 1,
+				"easing": "TWEEN.Easing.Linear.EaseNone"
+			}
+		}
+	},
+	"scene8-player": {
+		"isConstant": 0,
+		"elements": {
+		}
+	}
+}

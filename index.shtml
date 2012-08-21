@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--  http://matise.hopto.org/three_test/download/sole-tween.js-r2-3-g073fcd8/sole-tween.js-073fcd8/examples/05_spline.html -->
+    <title>Tween.js / Spline</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="js/sole-tween.js-f1bada8/src/Tween.js"></script>
+    <script type="text/javascript" src="js/sole-tween.js-f1bada8/examples/js/RequestAnimationFrame.js"></script>
+    <style>
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none outside none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+}
+q, blockquote {
+    quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: none;
+}
+a img {
+    border: medium none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+/* END RESET ******/
+
+html, body {
+    background: none repeat scroll 0 0 #F9F9F9;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    min-width: 1260px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    width: 100%;
+}
+
+.displayNone {
+    display: none !important;
+}
+.displayBlock {
+    display: block !important;
+}
+
+
+
+/* Wrappers
+**************************/
+#startWrapper {
+  left: 216px;
+  top: 186px;
+  height: 534px;
+  position: absolute;
+  width: 944px;
+}
+
+#mainWrapper {
+  background: none repeat scroll 0 0 #F9F9F9;
+  height: 100%;
+  min-width: 1260px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  visibility: hidden;
+}
+
+#mainWrapper #mapWrapper {
+  height: 6000px;
+  position: absolute;
+  width: 30000px;
+}
+
+/* Sections
+***************************/
+
+section {
+  position: absolute;
+}
+section > article {
+    -moz-transition-duration: 1s;
+    -moz-transition-property: opacity;
+    position: absolute;
+    width: 450px;
+    z-index: 75;
+}
+.sceneWrapper > .sceneAsset {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 49;
+}
+
+/* Section 0
+***************************/
+#sec0 {
+  left: 1875px;
+  top: 3560px;
+}
+section > article.text0 {
+  left: -460px;
+  top: -240px;
+}
+#scene0 {
+  height: 525px;
+  width: 996px;
+  left: -533px;
+  top: -247px;
+  background: green;
+}
+
+/* Section 1
+***************************/
+#sec1 {
+  left: 7070px;
+  top: 3978px;
+}
+section > article.text1 {
+  left: -234px;
+  top: 59px;
+}
+#scene1-ground2 {
+  height: 146px;
+  width: 712px;
+  left: -401px;
+  top: -128px;
+  background: purple;
+}
+
+
+
+
+#package {
+  z-index: 99;
+  color: white;
+  width: 20px;
+  height:20px;
+  background: red;
+  position: absolute;
+}
+
+
+  </style>
+
+  </head>
+  <body>
+    <div id="startWrapper" class="layerElement displayBlock">
+      <h2>The Story of Send</h2>
+      <h3>Take a journey through Google’s data centers by following an email along its path.</h3>
+      <a href="#/it-starts-with-send" id="button-start">Start the story</a>
+    </div>
+    <div id="mainWrapper">The Freshman 15
+      <div id="mapWrapper" class="displayNone" style="-moz-transform: translate3d(-1187px, -3157px, 0px);    opacity: 0;
+    visibility: hidden;">
+        <section id="sec0">
+          <article class="text0">
+            <h4>It Starts With Send</h4>
+            <p>Ever wondered what happens when you send an email? Take a journey with Gmail and find
+              out. Along the way, discover our data centers through videos, photos and more. It all
+              begins when you click send.
+            </p>
+          </article>
+          <div class="sceneWrapper">
+            <div id="scene0" class="sceneAsset"></div>
+            <div id="scene0-send-button" class="sceneAsset front displayBlock" style="opacity: 1; visibility: visible;">
+              <div class="back"></div>
+              <div id="scene0-send-button-red">Send</div>
+            </div>
+          </div>
+        </section>
+        <section id="sec1">
+          <article class="text1">
+            <h4>Over to Google</h4>
+            <p>Once your message leaves your Internet Service Provider (ISP), it enters an Internet               backbone router. Here’s where Google picks up your message and guides it to the               closest Google data center. To provide the best possible user experience, we try to               pick up your requests as early as possible from the local ISP, so we’ve built an               extensive Internet backbone across the U.S.
+            </p>
+          </article>
+          <div class="sceneWrapper">
+            <div id="scene1-ground2" class="sceneAsset"></div>
+          </div>
+        </section>
+
+        <div id="package">N</div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      init();
+
+      function init() {
+        var cameraSpline = {
+        	"0": [1875, 3560],
+        	"1": [1952, 3560],
+        	"2": [2475, 3560],
+        	"3": [2508, 3560],
+        	"4": [3675, 3560],
+        	"5": [4038, 3560],
+        	"6": [6382, 3575]
+        };
+        var packageSpline =  {
+        	"0": [2315, 3675],
+        	"1": [2802, 3675],
+        	"2": [2933, 3675],
+        	"3": [3233, 3675],
+        	"4": [3817, 3768],
+        	"5": [5267, 3815],
+        	"6": [7240, 3922]
+        };
+
+        var dummy = { p: 0 };
+        var cameraPos = [cameraSpline[0][0], cameraSpline[0][1]];
+
+        var spline = new Spline();
+
+        var cameraTween = new TWEEN.Tween( dummy ).to( { p: 1 }, 14000 ).easing( TWEEN.Easing.Linear.None ).onUpdate( function() {
+
+          cameraPos = spline.get2DPoint( cameraSpline, this.p );
+
+          document.getElementById('mapWrapper').style.MozTransform = 'translate3d(-'+cameraPos[0]+'px, -'+cameraPos[1]+'px, 0px)';
+
+        });
+        cameraTween.start();
+
+
+
+        var dummy2 = { p: 0 };
+        var packagePos = [packageSpline[0][0], packageSpline[0][1]];
+        var spline2 = new Spline();
+
+        var packageTween = new TWEEN.Tween( dummy2 ).to( { p: 1 }, 14000 ).easing( TWEEN.Easing.Linear.None ).onUpdate( function() {
+
+          packagePos = spline2.get2DPoint( packageSpline, this.p );
+
+          document.getElementById('package').style.MozTransform = 'translate3d('+packagePos[0]+'px, '+packagePos[1]+'px, 0px)';
+
+        });
+        packageTween.start();
+
+      }
+
+      function animate() {
+        requestAnimationFrame( animate );
+        TWEEN.update();
+      }
+
+
+
+
+
+
+
+
+      function Spline() {
+        var c = [], v2 = [0, 0],
+        point, intPoint, weight;
+
+        this.get2DPoint = function ( points, k ) {
+          point = ( Object.keys(points).length - 1 ) * k;
+          intPoint = Math.floor( point );
+          weight = point - intPoint;
+
+          c[ 0 ] = intPoint == 0 ? intPoint : intPoint - 1;
+          c[ 1 ] = intPoint;
+          c[ 2 ] = intPoint > Object.keys(points).length - 2 ? intPoint : intPoint + 1;
+          c[ 3 ] = intPoint > Object.keys(points).length - 3 ? intPoint : intPoint + 2;
+
+          v2[0] = interpolate( points[ c[ 0 ] ][0], points[ c[ 1 ] ][0], points[ c[ 2 ] ][0], points[ c[ 3 ] ][0], weight );
+          v2[1] = interpolate( points[ c[ 0 ] ][1], points[ c[ 1 ] ][1], points[ c[ 2 ] ][1], points[ c[ 3 ] ][1], weight );
+
+          return v2;
+        }
+
+        // Catmull-Rom
+        function interpolate( p0, p1, p2, p3, t ) {
+          var v0 = ( p2 - p0 ) * 0.5;
+          var v1 = ( p3 - p1 ) * 0.5;
+          var t2 = t * t;
+          var t3 = t * t2;
+          return ( 2 * p1 - 2 * p2 + v0 + v1 ) * t3 + ( - 3 * p1 + 3 * p2 - 2 * v0 - v1 ) * t2 + v0 * t + p1;
+        }
+      }
+
+
+
+
+
+
+      document.getElementById('button-start').addEventListener('click', function(){
+        console.log('start: click!');
+
+        document.getElementById('startWrapper').className = 'displayNone';
+
+        document.getElementById('mapWrapper').style.visibility = 'visible';
+        document.getElementById('mapWrapper').style.opacity = '1';
+        document.getElementById('mapWrapper').className = 'displayBlock';
+      });
+
+      document.getElementById('scene0-send-button-red').addEventListener('click', function(){
+        console.log('send: click!');
+
+        animate();
+      });
+
+    </script>
+  </body>
+</html>
