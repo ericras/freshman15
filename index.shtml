@@ -238,10 +238,9 @@ section > article.text1 {
 
           document.getElementById('mapWrapper').style.MozTransform = 'translate3d(-'+cameraPos[0]+'px, -'+cameraPos[1]+'px, 0px)';
 
-        });
-        cameraTween.start();
+        }).start();
 
-
+//https://github.com/sole/tween.js/pull/53
 
         var dummy2 = { p: 0 };
         var packagePos = [packageSpline[0][0], packageSpline[0][1]];
@@ -253,8 +252,7 @@ section > article.text1 {
 
           document.getElementById('package').style.MozTransform = 'translate3d('+packagePos[0]+'px, '+packagePos[1]+'px, 0px)';
 
-        });
-        packageTween.start();
+        }).start();
 
       }
 
